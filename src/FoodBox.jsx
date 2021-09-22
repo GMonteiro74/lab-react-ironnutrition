@@ -1,12 +1,13 @@
 import React from 'react';
-import { Card, Col, Divider, Button } from "antd";
+import { Card, Col, Button } from "antd";
 
 
 export default function FoodBox({food, eliminateFood}) {
-
     
     return (
-        <Col>
+        
+        <Col span={6}>
+        
             <Card title={food.name} style={{ width: 230, height: 300, margin: 10 }} >
             <img src={food.image} alt='this is the food' height={60} />
             <p>Calories: {food.calories}</p>
@@ -17,5 +18,6 @@ export default function FoodBox({food, eliminateFood}) {
             <Button type='primary' onClick={() => eliminateFood(food.name)}>Delete</Button>
             </Card>            
         </Col>
+        
     )
 }
